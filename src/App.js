@@ -22,12 +22,12 @@ function App() {
       setMode('dark')
       document.body.style.backgroundColor = "#042743"
       showAlert("Dark Mode Has Been Enabled", "Success")
-      document.title = 'TextUtils - Dark Mode'
+      // document.title = 'TextUtils - Dark Mode'
     }else{
       setMode('light')
       document.body.style.backgroundColor = "white"
       showAlert("Light Mode Has Been Enabled", "Success")
-      document.title = 'TextUtils - Light Mode'
+      // document.title = 'TextUtils - Light Mode'
 
     }
   }
@@ -42,7 +42,7 @@ function App() {
           <Route exact path="/" element={<TextForm heading="Write Text Here" mode={mode} showAlert={showAlert} />}></Route>
     </Routes> */}
       {/* <About/> */}
-      <TextForm heading="Write Text Here" mode={mode} showAlert={showAlert} />
+      <TextForm heading="Try TextUtils -word counter, characters counter " mode={mode} showAlert={showAlert} />
     </div>
   {/* </BrowserRouter> */}
   </>

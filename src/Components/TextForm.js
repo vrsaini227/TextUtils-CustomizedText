@@ -39,29 +39,29 @@ export default function TextForm(props) {
         <div className='container' style={{color:props.mode === 'dark'?'white':'#042743' }}>
             <div >
                 {/* h1 heading usings props */}
-                <h1>{props.heading}</h1>
+                <h1 className='mb-4'>{props.heading}</h1>
 
                 {/* this div is textarea */}
                 <div className="mb-3" >
-                <textarea className="form-control" id="exampleFormControlTextarea1" value={text} rows="4" style={{backgroundColor: props.mode === 'dark' ? 'grey' : 'white', color: props.mode === 'dark' ? 'white' : '#042743'}} onChange={handleOnChange}></textarea>
+                <textarea className="form-control" id="exampleFormControlTextarea1" value={text} rows="4" style={{backgroundColor: props.mode === 'dark' ? '#13466e' : 'white', color: props.mode === 'dark' ? 'white' : '#042743'}} onChange={handleOnChange}></textarea>
 
                     {/* this button use for characters convert into UpperCase */}
-                    <button className='btn btn-primary my-3 mx-2' onClick={handleUpClick}>Change to UpperCase</button>
+                    <button disabled={text.length===0} className='btn btn-primary my-3 mx-2' onClick={handleUpClick}>Change to UpperCase</button>
 
                     {/* this button use for characters convert into LowerCase */}
-                    <button className='btn btn-primary my-3 mx-2' onClick={handleLoClick}>Change to LowerCase</button>
-                    <button className='btn btn-primary my-3 mx-2' onClick={handleClearClick}>Clear Text</button>
+                    <button disabled={text.length===0} className='btn btn-primary my-3 mx-2' onClick={handleLoClick}>Change to LowerCase</button>
+                    <button disabled={text.length===0} className='btn btn-primary my-3 mx-2' onClick={handleClearClick}>Clear Text</button>
                 </div>
             </div>
 
             <div className="container mb-3">
                 {/* count words and characters from textarea */}
                 <h2>Your Text Summary</h2>
-                <p>{text.split(" ").length} Words And {text.length} Characters</p>
-                <p>{0.008 * text.split(" ").length} Minutes to Read</p>
+                <p>{text.split(" ").filter((elm)=>{return elm.length!==0}).length} Words And {text.length} Characters</p>
+                <p>{0.008 * text.split(" ").filter((elm)=>{return elm.length!==0}).length} Minutes to Read</p>
                 {/* Preview the text  */}
                 <h2>Preview</h2>
-                <p>{text.length>0?text:"Enter Something in the textbox above to Text to Preview Here"}</p>
+                <p>{text.length>0?text:"Nothing to preview!"}</p>
             </div>
             
         </div>
