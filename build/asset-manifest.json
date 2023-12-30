@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/TextUtils-CustomizedText/static/js/main.23a08a67.js",
+    "static/js/787.9eab1ba9.chunk.js": "/TextUtils-CustomizedText/static/js/787.9eab1ba9.chunk.js",
+    "index.html": "/TextUtils-CustomizedText/index.html",
+    "main.23a08a67.js.map": "/TextUtils-CustomizedText/static/js/main.23a08a67.js.map",
+    "787.9eab1ba9.chunk.js.map": "/TextUtils-CustomizedText/static/js/787.9eab1ba9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.23a08a67.js"
+  ]
+}
